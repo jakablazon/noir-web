@@ -1,0 +1,279 @@
+* { -webkit-font-smoothing: antialiased; }
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+body {
+	background: #fff;
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	color: #49494E;
+	font-size: 12px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* --------------------------------------------------------------------------------------------------------- GRID -- */
+
+.row { position: relative; width: 100%; max-width: 1200px; margin: auto; *zoom: 1; z-index: 20; }
+.row-full { max-width: 100%; }
+.row-spacing { padding: 50px 0 }
+.row-padding { padding: 60px; }
+.row:before, .row:after { content: " "; display: table; } .row:after { clear: both; }
+.column { position: relative; width: 100%; float: left; padding: 0 10px; }
+.panel { position: relative; padding: 30px; background: #fff; }
+
+.col-1 { width: 8.33333%; }
+.col-2 { width: 16.66667%; }
+.col-3 { width: 24.99%; }
+.col-4 { width: 33.33333%; }
+.col-5 { width: 41.66667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33333%; }
+.col-8 { width: 66.66667%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33333%; }
+.col-11 { width: 91.66667%; }
+.col-12 { width: 100%; }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------- LAYOUT -- */
+
+.intro-bottom, .intro-bottom-2, .intro-bottom-3 {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.intro-bottom.animated, .intro-bottom-2.animated, .intro-bottom-3.animated {
+	-webkit-animation: intro-bottom 0.7s cubic-bezier(0.1,0.7,0.4,1) both;
+	   -moz-animation: intro-bottom 0.7s cubic-bezier(0.1,0.7,0.4,1) both;
+	   	-ms-animation: intro-bottom 0.7s cubic-bezier(0.1,0.7,0.4,1) both;
+	     -o-animation: intro-bottom 0.7s cubic-bezier(0.1,0.7,0.4,1) both;
+	        animation: intro-bottom 0.7s cubic-bezier(0.1,0.7,0.4,1) both;
+}
+
+@-webkit-keyframes intro-bottom {
+	0% { opacity: 0; -webkit-transform: translate3d(0, 50px, 0); }
+	100% { opacity: 1; -webkit-transform: translate3d(0, 0, 0); }
+}
+@-moz-keyframes intro-bottom {
+	0% { opacity: 0; -moz-transform: translate3d(0, 50px, 0); }
+	100% { opacity: 1; -moz-transform: translate3d(0, 0, 0); }
+}
+@-ms-keyframes intro-bottom {
+	0% { opacity: 0; -ms-transform: translate3d(0, 50px, 0); }
+	100% { opacity: 1; -ms-transform: translate3d(0, 0, 0); }
+}
+@-o-keyframes intro-bottom {
+	0% { opacity: 0; -o-transform: translate3d(0, 50px, 0); }
+	100% { opacity: 1; -o-transform: translate3d(0, 0, 0); }
+}
+@keyframes intro-bottom {
+	0% { opacity: 0; transform: translate3d(0, 50px, 0); }
+	100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+h1 {
+	font-size: 80px;
+	font-family: 'Abril Fatface', cursive;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 11px;
+	letter-spacing: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgba(255,255,255, 0.5);
+}
+
+h3 {
+	font-size: 27px;
+	font-weight: 300;
+	color: #AC9059;
+	margin-bottom: 15px;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.btn {
+-webkit-transition: all 500ms;
+   -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+     -o-transition: all 500ms;
+        transition: all 500ms;
+}
+
+.btn {
+	display: inline-block;
+	padding: 25px 40px;
+	background: #0E0E10;
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+	letter-spacing: 5px;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.btn:hover {
+	-webkit-transform: scale(1.07);
+	-moz-transform: scale(1.07);
+	-ms-transform: scale(1.07);
+	-o-transform: scale(1.07);
+	transform: scale(1.07);
+}
+
+.gold {
+	background: #AC9059;
+}
+
+#hero {
+	height: 800px;
+	background: #0E0E10 url(assets/hero.jpg);
+	background-size: cover;
+	color: #fff;
+
+}
+
+.logo {
+	margin-top: 80px;
+	margin-bottom: 150px;
+}
+
+#hero .btn {
+	margin-top: 60px;
+}
+
+#photos {
+	top: -60px;
+}
+
+#photos img {
+	max-width: 370px;
+	width: 100%;
+	box-shadow: 0 20px 80px rgba(0,0,0,0.2);
+}
+
+#photos .photo-2 {
+	margin-top: -60px;
+}
+
+#description {
+	box-shadow: 0 100px 150px rgba(0,0,0,0.03);
+}
+
+#description .btn {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.floater {
+	position: absolute;
+}
+
+.salmon {
+	right: 0;
+	top: -250px;
+}
+
+.olives {
+	left: 0;
+	top: -190px;
+}
+
+#logotypes {
+	padding: 100px 0;
+}
+
+#logotypes img {
+	margin: 0 20px 20px 20px;
+}
+
+#logotypes h2 {
+	color: #AC9059;
+	opacity: 1;
+	letter-spacing: 13px;
+}
+
+.logotypes {
+	margin-top: 50px;
+}
+
+#footer {
+	padding: 150px 0;
+	background: url(assets/footer-bg.jpg);
+	background-size: cover;
+}
+
+#footer h1 {
+	color: #fff;
+}
+
+#footer .btn {
+	margin-top: 50px;
+}
+
+#footer h1 {
+	font-size: 50px;
+}
+
+@media only screen and (max-width: 1400px) {
+	.floater {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.logo {
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+
+	#hero h2 {
+		letter-spacing: 10px;
+	}
+
+	#hero h1 {
+		font-size: 80px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.logo {
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+
+	#hero h2 {
+		letter-spacing: 10px;
+	}
+
+	#hero h1 {
+		font-size: 80px;
+	}
+
+	#photos .photo-2 {
+		margin-top: -25px;
+	}
+}
